@@ -1,6 +1,6 @@
-<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="C__0"></a>C++ 程式設計</h1>
-<p class="has-line-data" data-line-start="1" data-line-end="2">create by aura</p>
-<pre><code class="has-line-data" data-line-start="4" data-line-end="13" class="language-cpp=">#include&lt;iostream&gt;
+<h1 id="c-程式設計">C++ 程式設計</h1>
+<p>create by aura</p>
+<pre><code class="language-cpp=">#include&lt;iostream&gt;
 using namespace std;
 int main(){
     //int i;
@@ -9,308 +9,196 @@ int main(){
     }
 }
 </code></pre>
-<h2 class="code-line" data-line-start=15 data-line-end=16 ><a id="_15"></a>標頭檔</h2>
-<p class="has-line-data" data-line-start="16" data-line-end="17">寫程式前，要先引入函式庫，這樣才可以使用函式庫內的function</p>
-<pre><code class="has-line-data" data-line-start="18" data-line-end="20">#include&lt;函式庫名稱&gt;
+<h2 id="標頭檔">標頭檔</h2>
+<p>寫程式前，要先引入函式庫，這樣才可以使用函式庫內的function</p>
+<pre><code>#include&lt;函式庫名稱&gt;
 </code></pre>
-<p class="has-line-data" data-line-start="20" data-line-end="21">像是要寫C++時，一定要引入<code>&lt;iostream&gt;</code>的函式庫</p>
-<pre><code class="has-line-data" data-line-start="22" data-line-end="24">#include&lt;iostream&gt;
+<p>像是要寫C++時，一定要引入<code>&lt;iostream&gt;</code>的函式庫</p>
+<pre><code>#include&lt;iostream&gt;
 </code></pre>
-<h2 class="code-line" data-line-start=25 data-line-end=26 ><a id="_25"></a>命名空間</h2>
-<p class="has-line-data" data-line-start="26" data-line-end="27">命名空間又可以當作程式的識別碼，用來區分不同函式庫中相同名稱的function</p>
-<p class="has-line-data" data-line-start="28" data-line-end="29">以下程式碼為例，<code>cout</code>和<code>endl</code>前的<code>std</code>就式命名空間</p>
-<pre><code class="has-line-data" data-line-start="30" data-line-end="35" class="language-cpp=">#include&lt;iostream&gt;
+<h2 id="命名空間">命名空間</h2>
+<p>命名空間又可以當作程式的識別碼，用來區分不同函式庫中相同名稱的function</p>
+<p>以下程式碼為例，<code>cout</code>和<code>endl</code>前的<code>std</code>就式命名空間</p>
+<pre><code class="language-cpp=">#include&lt;iostream&gt;
 int main(){
     std::cout&lt;&lt;&quot;今天天氣真好&quot;&lt;&lt;std::endl;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="35" data-line-end="36">每次使用一次<code>cout</code>就要寫一次<code>std</code>，那這樣寫100次<code>cout</code>勢必很麻煩，因此可以直接全域定義程式碼會使用到<code>std</code>的命名空間</p>
-<pre><code class="has-line-data" data-line-start="37" data-line-end="43" class="language-cpp=">#include&lt;iostream&gt;
+<p>每次使用一次<code>cout</code>就要寫一次<code>std</code>，那這樣寫100次<code>cout</code>勢必很麻煩，因此可以直接全域定義程式碼會使用到<code>std</code>的命名空間</p>
+<pre><code class="language-cpp=">#include&lt;iostream&gt;
 using namespace std;
 int main(){
     cout&lt;&lt;&quot;今天天氣真好&quot;&lt;&lt;endl;
 }
 </code></pre>
-<h2 class="code-line" data-line-start=45 data-line-end=46 ><a id="_45"></a>註解</h2>
-<p class="has-line-data" data-line-start="46" data-line-end="47">註解可以用來解釋程式碼，提高程式碼的可讀性，有 <strong>單行註解</strong> 或是 <strong>多行註解</strong> ，註解中的所有文字都會被編譯器忽略。</p>
-<h3 class="code-line" data-line-start=47 data-line-end=48 ><a id="_47"></a>單行註解</h3>
-<p class="has-line-data" data-line-start="48" data-line-end="49">在<code>//</code>後的所有文字都會被當註解</p>
-<pre><code class="has-line-data" data-line-start="50" data-line-end="52">//註解文字
+<h2 id="註解">註解</h2>
+<p>註解可以用來解釋程式碼，提高程式碼的可讀性，有 <strong>單行註解</strong> 或是 <strong>多行註解</strong> ，註解中的所有文字都會被編譯器忽略。</p>
+<h3 id="單行註解">單行註解</h3>
+<p>在<code>//</code>後的所有文字都會被當註解</p>
+<pre><code>//註解文字
 </code></pre>
-<h3 class="code-line" data-line-start=52 data-line-end=53 ><a id="_52"></a>多行註解</h3>
-<p class="has-line-data" data-line-start="53" data-line-end="54">在<code>/*</code>到<code>*/</code>之間的所有文字都會被當註解</p>
-<pre><code class="has-line-data" data-line-start="55" data-line-end="61">/*  
+<h3 id="多行註解">多行註解</h3>
+<p>在<code>/*</code>到<code>*/</code>之間的所有文字都會被當註解</p>
+<pre><code>/*  
   註解文字
   註解文字
   註解文字
 */
 </code></pre>
-<h2 class="code-line" data-line-start=61 data-line-end=62 ><a id="_61"></a>數據類型</h2>
-<h3 class="code-line" data-line-start=62 data-line-end=63 ><a id="_62"></a>類型</h3>
-<p class="has-line-data" data-line-start="63" data-line-end="64">C++常見的數據類型有6個</p>
-<table class="table table-striped table-bordered">
+<h2 id="數據類型">數據類型</h2>
+<h3 id="類型">類型</h3>
+<p>C++常見的數據類型有6個</p>
+<table>
 <thead>
 <tr>
-<th style="text-align:center">關鍵字</th>
-<th style="text-align:center">名稱</th>
+<th align="center">關鍵字</th>
+<th align="center">名稱</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">bool</td>
-<td style="text-align:center">布林值</td>
+<tbody><tr>
+<td align="center">bool</td>
+<td align="center">布林值</td>
 </tr>
 <tr>
-<td style="text-align:center">char</td>
-<td style="text-align:center">字元</td>
+<td align="center">char</td>
+<td align="center">字元</td>
 </tr>
 <tr>
-<td style="text-align:center">string</td>
-<td style="text-align:center">字串</td>
+<td align="center">string</td>
+<td align="center">字串</td>
 </tr>
 <tr>
-<td style="text-align:center">int</td>
-<td style="text-align:center">整數</td>
+<td align="center">int</td>
+<td align="center">整數</td>
 </tr>
 <tr>
-<td style="text-align:center">float</td>
-<td style="text-align:center">浮點數</td>
+<td align="center">float</td>
+<td align="center">浮點數</td>
 </tr>
 <tr>
-<td style="text-align:center">double</td>
-<td style="text-align:center">雙精度浮點數</td>
+<td align="center">double</td>
+<td align="center">雙精度浮點數</td>
 </tr>
 <tr>
-<td style="text-align:center">void</td>
-<td style="text-align:center">無值</td>
+<td align="center">void</td>
+<td align="center">無值</td>
 </tr>
-</tbody>
-</table>
-<h3 class="code-line" data-line-start=75 data-line-end=76 ><a id="_75"></a>修飾符</h3>
-<p class="has-line-data" data-line-start="76" data-line-end="77">數據類型又有一個或是多個類型修飾符可以使用：</p>
+</tbody></table>
+<h3 id="修飾符">修飾符</h3>
+<p>數據類型又有一個或是多個類型修飾符可以使用：</p>
 <ul>
-<li class="has-line-data" data-line-start="77" data-line-end="78">singed 有號</li>
-<li class="has-line-data" data-line-start="78" data-line-end="79">unsigned 無號</li>
-<li class="has-line-data" data-line-start="79" data-line-end="80">short 短型</li>
-<li class="has-line-data" data-line-start="80" data-line-end="82">long 長型</li>
+<li>singed 有號</li>
+<li>unsigned 無號</li>
+<li>short 短型</li>
+<li>long 長型</li>
 </ul>
-<p class="has-line-data" data-line-start="82" data-line-end="83">各類數據類型，占用大小，值的範圍參考下表</p>
-<table class="table table-striped table-bordered">
-<thead>
-<tr>
-<th style="text-align:center">類型</th>
-<th style="text-align:center">修飾符+類型</th>
-<th style="text-align:center">占用大小(位元組)</th>
-<th style="text-align:center">範圍</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">bool</td>
-<td style="text-align:center">bool</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">1是true 0是false</td>
-</tr>
-<tr>
-<td style="text-align:center">char</td>
-<td style="text-align:center">char</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">-128 ~ 127 參考<a href="https://zh.wikipedia.org/wiki/ASCII">ASCII碼</a></td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center">signed char</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">-128 ~ 127</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center">unsigned char</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">0 ~ 255</td>
-</tr>
-<tr>
-<td style="text-align:center">int</td>
-<td style="text-align:center">int</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">-2<sup>31</sup> ~ 2<sup>31</sup>-1</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center">signed int</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">-2<sup>31</sup> ~ 2<sup>31</sup>-1</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center">unsigned int</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">0 ~ 2<sup>32</sup></td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center">short int</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">-32768 ~ 32767</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center">signed short int</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">0 ~ 65535</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center">unsigned short int</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">-32768 ~ 32767</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center">long int</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">-2<sup>31</sup> ~ 2<sup>31</sup>-1</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center">signed long int</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">-2<sup>31</sup> ~ 2<sup>31</sup>-1</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center">unsigned long int</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">0 ~ 2<sup>32</sup></td>
-</tr>
-<tr>
-<td style="text-align:center">float</td>
-<td style="text-align:center">float</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">±3.4×10<sup>-38</sup> ~ ±3.4×10<sup>38</sup></td>
-</tr>
-<tr>
-<td style="text-align:center">double</td>
-<td style="text-align:center">double</td>
-<td style="text-align:center">8</td>
-<td style="text-align:center">±1.7×10<sup>-308</sup> ~ ±1.7×10<sup>308</sup></td>
-</tr>
-</tbody>
-</table>
-<h3 class="code-line" data-line-start=101 data-line-end=102 ><a id="string_101"></a>string</h3>
-<p class="has-line-data" data-line-start="102" data-line-end="105"><code>string</code> 比較特別，他個概念就是多個字元組成的字串變數。<br>
-字元要使用單引號<code>''</code>，引號中間只能有一個字元<br>
+<p>各類數據類型，占用大小，值的範圍參考下表
+|  類型  |    修飾符+類型     | 占用大小(位元組) |             範圍             |
+|:------:|:------------------:|:----------------:|:----------------------------:|
+|  bool  |        bool        |        1         |       1是true 0是false       |
+|  char  |        char        |        1         |          -128 ~ 127 參考<a href="https://zh.wikipedia.org/wiki/ASCII">ASCII碼</a>          |
+|        |    signed char     |        1         |          -128 ~ 127          |
+|        |   unsigned char    |        1         |           0 ~ 255            |
+|  int   |        int         |        4         |       -2^31^ ~ 2^31^-1       |
+|        |     signed int     |        4         |       -2^31^ ~ 2^31^-1       |
+|        |    unsigned int    |        4         |          0 ~ 2^32^           |
+|        |     short int      |        2         |        -32768 ~ 32767        |
+|        |  signed short int  |        2         |          0 ~ 65535           |
+|        | unsigned short int |        2         |        -32768 ~ 32767        |
+|        |      long int      |        4         |       -2^31^ ~ 2^31^-1       |
+|        |  signed long int   |        4         |       -2^31^ ~ 2^31^-1       |
+|        | unsigned long int  |        4         |          0 ~ 2^32^           |
+| float  |       float        |        4         |  ±3.4×10^-38^ ~ ±3.4×10^38^  |
+| double |       double       |        8         | ±1.7×10^-308^ ~ ±1.7×10^308^ |</p>
+<h3 id="string">string</h3>
+<p><code>string</code> 比較特別，他個概念就是多個字元組成的字串變數。
+字元要使用單引號<code>&#39;&#39;</code>，引號中間只能有一個字元
 字串要用雙引號<code>&quot;&quot;</code>，引號中間可以有多個字元</p>
-<h2 class="code-line" data-line-start=105 data-line-end=106 ><a id="_105"></a>變數</h2>
-<h3 class="code-line" data-line-start=106 data-line-end=107 ><a id="_106"></a>定義</h3>
-<p class="has-line-data" data-line-start="107" data-line-end="108">定義變數時，要先指定一個數據類型，再寫下變數名稱。</p>
-<pre><code class="has-line-data" data-line-start="109" data-line-end="111">型態 名稱;
+<h2 id="變數">變數</h2>
+<h3 id="定義">定義</h3>
+<p>定義變數時，要先指定一個數據類型，再寫下變數名稱。</p>
+<pre><code>型態 名稱;
 </code></pre>
-<p class="has-line-data" data-line-start="111" data-line-end="112">舉例：</p>
-<pre><code class="has-line-data" data-line-start="113" data-line-end="118">int a;
+<p>舉例：</p>
+<pre><code>int a;
 float b;
 double c;
 string d;
 </code></pre>
-<p class="has-line-data" data-line-start="118" data-line-end="119">如果有多個同數據類型的變數，可以寫在同行用逗號隔開。</p>
-<pre><code class="has-line-data" data-line-start="120" data-line-end="122">int a,b,c;
+<p>如果有多個同數據類型的變數，可以寫在同行用逗號隔開。</p>
+<pre><code>int a,b,c;
 </code></pre>
-<h3 class="code-line" data-line-start=122 data-line-end=123 ><a id="_122"></a>初始化</h3>
-<p class="has-line-data" data-line-start="123" data-line-end="124">在定義變數時可以指定一個初始值讓變數初始化，初始化由一個等號和一個常量組成。</p>
-<pre><code class="has-line-data" data-line-start="125" data-line-end="127">型態 名稱 = 初始值;
+<h3 id="初始化">初始化</h3>
+<p>在定義變數時可以指定一個初始值讓變數初始化，初始化由一個等號和一個常量組成。</p>
+<pre><code>型態 名稱 = 初始值;
 </code></pre>
-<p class="has-line-data" data-line-start="127" data-line-end="128">舉例：</p>
-<pre><code class="has-line-data" data-line-start="129" data-line-end="134">int a = 3, b = 4;
+<p>舉例：</p>
+<pre><code>int a = 3, b = 4;
 float c = 0.6;
-char  d = 'x';
+char  d = &#39;x&#39;;
 string  e = &quot;test&quot;;
 </code></pre>
-<p class="has-line-data" data-line-start="134" data-line-end="135">字元需用單引號<code>''</code>來表示</p>
-<p class="has-line-data" data-line-start="136" data-line-end="137">當變數沒有做初始化時，系統會自動初始化變數，參考下表：</p>
-<table class="table table-striped table-bordered">
-<thead>
-<tr>
-<th style="text-align:center">類型</th>
-<th style="text-align:center">初始化默認值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">int</td>
-<td style="text-align:center">0</td>
-</tr>
-<tr>
-<td style="text-align:center">char</td>
-<td style="text-align:center">‘\0’</td>
-</tr>
-<tr>
-<td style="text-align:center">string</td>
-<td style="text-align:center">“\0”</td>
-</tr>
-<tr>
-<td style="text-align:center">float</td>
-<td style="text-align:center">0</td>
-</tr>
-<tr>
-<td style="text-align:center">double</td>
-<td style="text-align:center">0</td>
-</tr>
-</tbody>
-</table>
-<h3 class="code-line" data-line-start=144 data-line-end=145 ><a id="_144"></a>常數</h3>
-<p class="has-line-data" data-line-start="145" data-line-end="146">如果初始化定義的變數值不會更改時，可以使用<code>const</code>的修飾符，該變數值就無法有任何改變</p>
-<pre><code class="has-line-data" data-line-start="147" data-line-end="150">const 型態 名稱 = 初始值;
+<p>字元需用單引號<code>&#39;&#39;</code>來表示</p>
+<p>當變數沒有做初始化時，系統會自動初始化變數，參考下表：
+|  類型  | 初始化默認值 |
+|:------:|:------------:|
+|  int   |      0       |
+|  char  |     &#39;\0&#39;     |
+|  string  |     &quot;\0&quot;     |
+| float  |      0       |
+| double |      0       |</p>
+<h3 id="常數">常數</h3>
+<p>如果初始化定義的變數值不會更改時，可以使用<code>const</code>的修飾符，該變數值就無法有任何改變</p>
+<pre><code>const 型態 名稱 = 初始值;
 const int a = 10;
 </code></pre>
-<h3 class="code-line" data-line-start=150 data-line-end=151 ><a id="_150"></a>算數運算符</h3>
-<table class="table table-striped table-bordered">
+<h3 id="算數運算符">算數運算符</h3>
+<table>
 <thead>
 <tr>
-<th style="text-align:center">運算符</th>
-<th style="text-align:center">描述</th>
-<th style="text-align:center">範例</th>
+<th align="center">運算符</th>
+<th align="center">描述</th>
+<th align="center">範例</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">+</td>
-<td style="text-align:center">兩數相加</td>
-<td style="text-align:center">a + b</td>
+<tbody><tr>
+<td align="center">+</td>
+<td align="center">兩數相加</td>
+<td align="center">a + b</td>
 </tr>
 <tr>
-<td style="text-align:center">-</td>
-<td style="text-align:center">前數減後數</td>
-<td style="text-align:center">a - b</td>
+<td align="center">-</td>
+<td align="center">前數減後數</td>
+<td align="center">a - b</td>
 </tr>
 <tr>
-<td style="text-align:center">*</td>
-<td style="text-align:center">兩數相乘</td>
-<td style="text-align:center">a * b</td>
+<td align="center">*</td>
+<td align="center">兩數相乘</td>
+<td align="center">a * b</td>
 </tr>
 <tr>
-<td style="text-align:center">/</td>
-<td style="text-align:center">前數除後數</td>
-<td style="text-align:center">a / b</td>
+<td align="center">/</td>
+<td align="center">前數除後數</td>
+<td align="center">a / b</td>
 </tr>
 <tr>
-<td style="text-align:center">%</td>
-<td style="text-align:center">前數減後數的餘數</td>
-<td style="text-align:center">a % b</td>
+<td align="center">%</td>
+<td align="center">前數減後數的餘數</td>
+<td align="center">a % b</td>
 </tr>
 <tr>
-<td style="text-align:center">++</td>
-<td style="text-align:center">整數值+1</td>
-<td style="text-align:center">a++</td>
+<td align="center">++</td>
+<td align="center">整數值+1</td>
+<td align="center">a++</td>
 </tr>
 <tr>
-<td style="text-align:center">--</td>
-<td style="text-align:center">整數值-1</td>
-<td style="text-align:center">a--</td>
+<td align="center">--</td>
+<td align="center">整數值-1</td>
+<td align="center">a--</td>
 </tr>
-</tbody>
-</table>
-<p class="has-line-data" data-line-start="161" data-line-end="162">實作：</p>
-<pre><code class="has-line-data" data-line-start="163" data-line-end="175" class="language-cpp=">#include &lt;iostream&gt;
+</tbody></table>
+<p>實作：</p>
+<pre><code class="language-cpp=">#include &lt;iostream&gt;
 using namespace std;
  
 int main(){
@@ -322,52 +210,50 @@ int main(){
     cout &lt;&lt; &quot;c 的值是 &quot; &lt;&lt; c &lt;&lt; endl ;
 }
 </code></pre>
-<h3 class="code-line" data-line-start=175 data-line-end=176 ><a id="_175"></a>賦值運算符</h3>
-<table class="table table-striped table-bordered">
+<h3 id="賦值運算符">賦值運算符</h3>
+<table>
 <thead>
 <tr>
-<th style="text-align:center">運算符</th>
-<th style="text-align:center">描述</th>
-<th style="text-align:center">範例</th>
+<th align="center">運算符</th>
+<th align="center">描述</th>
+<th align="center">範例</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">=</td>
-<td style="text-align:center">把右邊的值賦給左邊變數</td>
-<td style="text-align:center">c = a + b</td>
+<tbody><tr>
+<td align="center">=</td>
+<td align="center">把右邊的值賦給左邊變數</td>
+<td align="center">c = a + b</td>
 </tr>
 <tr>
-<td style="text-align:center">+=</td>
-<td style="text-align:center">把左邊的值加上右邊值賦給左邊變數</td>
-<td style="text-align:center">a += b (等同 a = a + b)</td>
+<td align="center">+=</td>
+<td align="center">把左邊的值加上右邊值賦給左邊變數</td>
+<td align="center">a += b (等同 a = a + b)</td>
 </tr>
 <tr>
-<td style="text-align:center">-=</td>
-<td style="text-align:center">把左邊的值減掉右邊值賦給左邊變數</td>
-<td style="text-align:center">a -= b (等同 a = a - b)</td>
+<td align="center">-=</td>
+<td align="center">把左邊的值減掉右邊值賦給左邊變數</td>
+<td align="center">a -= b (等同 a = a - b)</td>
 </tr>
 <tr>
-<td style="text-align:center">*=</td>
-<td style="text-align:center">把左邊的值乘上右邊值賦給左邊變數</td>
-<td style="text-align:center">a *= b (等同 a = a * b)</td>
+<td align="center">*=</td>
+<td align="center">把左邊的值乘上右邊值賦給左邊變數</td>
+<td align="center">a *= b (等同 a = a * b)</td>
 </tr>
 <tr>
-<td style="text-align:center">/=</td>
-<td style="text-align:center">把左邊的值除上右邊值賦給左邊變數</td>
-<td style="text-align:center">a /= b (等同 a = a / b)</td>
+<td align="center">/=</td>
+<td align="center">把左邊的值除上右邊值賦給左邊變數</td>
+<td align="center">a /= b (等同 a = a / b)</td>
 </tr>
 <tr>
-<td style="text-align:center">%=</td>
-<td style="text-align:center">把左邊的值除上右邊值的餘數賦給左邊變數</td>
-<td style="text-align:center">a %= b(等同 a = a % b)</td>
+<td align="center">%=</td>
+<td align="center">把左邊的值除上右邊值的餘數賦給左邊變數</td>
+<td align="center">a %= b(等同 a = a % b)</td>
 </tr>
-</tbody>
-</table>
-<h2 class="code-line" data-line-start=185 data-line-end=186 ><a id="_185"></a>變數作用域</h2>
-<h3 class="code-line" data-line-start=186 data-line-end=187 ><a id="_186"></a>區域變數</h3>
-<p class="has-line-data" data-line-start="187" data-line-end="188">變數只能在該區域才能使用，不同區域的變數可以有相同名稱。</p>
-<pre><code class="has-line-data" data-line-start="189" data-line-end="198" class="language-cpp=">#include&lt;iostream&gt;
+</tbody></table>
+<h2 id="變數作用域">變數作用域</h2>
+<h3 id="區域變數">區域變數</h3>
+<p>變數只能在該區域才能使用，不同區域的變數可以有相同名稱。</p>
+<pre><code class="language-cpp=">#include&lt;iostream&gt;
 using namespace std;
 int main(){
     int a=10,b=5;
@@ -376,11 +262,11 @@ void test(){
     int a=5;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="198" data-line-end="200">在<code>main</code>函式裡面的<code>a</code>和<code>test</code>函式裡面的<code>a</code>式兩個獨立的變數，互不影響。<br>
+<p>在<code>main</code>函式裡面的<code>a</code>和<code>test</code>函式裡面的<code>a</code>式兩個獨立的變數，互不影響。
 <code>main</code>函式裡面的<code>b</code>不會在<code>main</code>函式以外的地方被讀到。</p>
-<h3 class="code-line" data-line-start=200 data-line-end=201 ><a id="_200"></a>全域變數</h3>
-<p class="has-line-data" data-line-start="201" data-line-end="202">變數在整個程式裡面式共通的，任何區域的程式碼的可以去更改全域變數的值</p>
-<pre><code class="has-line-data" data-line-start="203" data-line-end="215" class="language-cpp=">#include&lt;iostream&gt;
+<h3 id="全域變數">全域變數</h3>
+<p>變數在整個程式裡面式共通的，任何區域的程式碼的可以去更改全域變數的值</p>
+<pre><code class="language-cpp=">#include&lt;iostream&gt;
 using namespace std;
 
 int a = 20;
@@ -392,11 +278,11 @@ void test(){
     int c=5;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="215" data-line-end="216">全域變數使用的名稱在區域變數宣告時就不能再次使用。</p>
-<h2 class="code-line" data-line-start=216 data-line-end=217 ><a id="_216"></a>輸入輸出</h2>
-<h3 class="code-line" data-line-start=218 data-line-end=219 ><a id="cout_218"></a>標準輸出流cout</h3>
-<p class="has-line-data" data-line-start="219" data-line-end="220"><code>cout</code>要與流插入運算符<code>&lt;&lt;</code>，使用，方式如下</p>
-<pre><code class="has-line-data" data-line-start="221" data-line-end="229" class="language-cpp=">#include &lt;iostream&gt;
+<p>全域變數使用的名稱在區域變數宣告時就不能再次使用。</p>
+<h2 id="輸入輸出">輸入輸出</h2>
+<h3 id="標準輸出流cout">標準輸出流cout</h3>
+<p><code>cout</code>要與流插入運算符<code>&lt;&lt;</code>，使用，方式如下</p>
+<pre><code class="language-cpp=">#include &lt;iostream&gt;
 using namespace std;
 int main( )
 {
@@ -404,8 +290,8 @@ int main( )
    cout &lt;&lt; name ;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="229" data-line-end="230">不同的數據要一起輸出時要用<code>&lt;&lt;</code>隔開，方式如下</p>
-<pre><code class="has-line-data" data-line-start="231" data-line-end="240" class="language-cpp=">#include &lt;iostream&gt;
+<p>不同的數據要一起輸出時要用<code>&lt;&lt;</code>隔開，方式如下</p>
+<pre><code class="language-cpp=">#include &lt;iostream&gt;
 using namespace std;
 int main( )
 {
@@ -414,8 +300,8 @@ int main( )
    cout &lt;&lt; word &lt;&lt; num ;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="240" data-line-end="241">變數也可以直接做運算</p>
-<pre><code class="has-line-data" data-line-start="242" data-line-end="250" class="language-cpp=">#include &lt;iostream&gt;
+<p>變數也可以直接做運算</p>
+<pre><code class="language-cpp=">#include &lt;iostream&gt;
 using namespace std;
 int main( )
 {
@@ -423,17 +309,17 @@ int main( )
    cout &lt;&lt; &quot;a + b = &quot; &lt;&lt; a+b ;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="250" data-line-end="251">換行可以用<code>endl</code>，等同<code>'\n'</code></p>
-<pre><code class="has-line-data" data-line-start="252" data-line-end="259" class="language-cpp=">#include &lt;iostream&gt;
+<p>換行可以用<code>endl</code>，等同<code>&#39;\n&#39;</code></p>
+<pre><code class="language-cpp=">#include &lt;iostream&gt;
 using namespace std;
 int main( )
 {
    cout &lt;&lt; &quot;一二三&quot; &lt;&lt; endl &lt;&lt; &quot;四五六&quot;;
 }
 </code></pre>
-<h3 class="code-line" data-line-start=261 data-line-end=262 ><a id="cin_261"></a>標準輸出流cin</h3>
-<p class="has-line-data" data-line-start="262" data-line-end="263"><code>cout</code>要與流提取運算符<code>&gt;&gt;</code>，使用，方式如下</p>
-<pre><code class="has-line-data" data-line-start="264" data-line-end="273" class="language-cpp=">#include &lt;iostream&gt;
+<h3 id="標準輸出流cin">標準輸出流cin</h3>
+<p><code>cout</code>要與流提取運算符<code>&gt;&gt;</code>，使用，方式如下</p>
+<pre><code class="language-cpp=">#include &lt;iostream&gt;
 using namespace std;
 int main( )
 {
@@ -442,8 +328,8 @@ int main( )
    cout &lt;&lt; &quot;a = &quot; &lt;&lt; a &lt;&lt; endl ;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="273" data-line-end="274">可以進行多數據輸入，每個變數用<code>&gt;&gt;</code>隔開</p>
-<pre><code class="has-line-data" data-line-start="275" data-line-end="285" class="language-cpp=">#include &lt;iostream&gt;
+<p>可以進行多數據輸入，每個變數用<code>&gt;&gt;</code>隔開</p>
+<pre><code class="language-cpp=">#include &lt;iostream&gt;
 using namespace std;
 int main( )
 {
@@ -453,26 +339,26 @@ int main( )
    cout &lt;&lt; &quot;b = &quot; &lt;&lt; b &lt;&lt; endl ;
 }
 </code></pre>
-<h2 class="code-line" data-line-start=286 data-line-end=287 ><a id="_286"></a>判斷</h2>
-<h3 class="code-line" data-line-start=287 data-line-end=288 ><a id="if_287"></a>if</h3>
-<p class="has-line-data" data-line-start="288" data-line-end="289">如果有符合條件，就會執行<code>if</code>內的程式碼</p>
-<pre><code class="has-line-data" data-line-start="290" data-line-end="294">if(條件式){
+<h2 id="判斷">判斷</h2>
+<h3 id="if">if</h3>
+<p>如果有符合條件，就會執行<code>if</code>內的程式碼</p>
+<pre><code>if(條件式){
     ...
 }
 </code></pre>
-<h3 class="code-line" data-line-start=294 data-line-end=295 ><a id="ifelse_294"></a>if…else</h3>
-<p class="has-line-data" data-line-start="295" data-line-end="296">如果有符合條件，就會執行<code>if</code>內的程式碼，反之不符合的話，會執行<code>else</code>內的程式碼</p>
-<pre><code class="has-line-data" data-line-start="297" data-line-end="304">if(條件式){
+<h3 id="ifelse">if...else</h3>
+<p>如果有符合條件，就會執行<code>if</code>內的程式碼，反之不符合的話，會執行<code>else</code>內的程式碼</p>
+<pre><code>if(條件式){
     ...
 }
 else{
     ...
 }
 </code></pre>
-<h3 class="code-line" data-line-start=304 data-line-end=305 ><a id="if_304"></a>多if</h3>
-<p class="has-line-data" data-line-start="305" data-line-end="307">如果有符合條件，就會執行<code>if</code>內的程式碼，如果不符合，會去檢查<code>else if</code>的條件，不符合就在往下檢查，直到<code>else</code>或是沒判斷式。<br>
+<h3 id="多if">多if</h3>
+<p>如果有符合條件，就會執行<code>if</code>內的程式碼，如果不符合，會去檢查<code>else if</code>的條件，不符合就在往下檢查，直到<code>else</code>或是沒判斷式。
 <code>else if</code> 可以是多個但第一個一定要是<code>if</code>。</p>
-<pre><code class="has-line-data" data-line-start="308" data-line-end="318">if(條件式){
+<pre><code>if(條件式){
     ...
 }
 else if(條件式2){
@@ -482,8 +368,8 @@ else{
     ...
 }
 </code></pre>
-<h3 class="code-line" data-line-start=318 data-line-end=319 ><a id="switch_318"></a>switch</h3>
-<pre><code class="has-line-data" data-line-start="320" data-line-end="332">switch(變數名稱 或 運算式) {
+<h3 id="switch">switch</h3>
+<pre><code>switch(變數名稱 或 運算式) {
     case 數字 或 字元:
         程式碼1
         break;
@@ -495,8 +381,8 @@ else{
         break;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="333" data-line-end="334">switch後面括號可以直接放變數或是運算式</p>
-<pre><code class="has-line-data" data-line-start="335" data-line-end="343">switch(a){
+<p>switch後面括號可以直接放變數或是運算式  </p>
+<pre><code>switch(a){
     ...
 }
 
@@ -504,9 +390,8 @@ switch(x-y){
     ...
 }
 </code></pre>
-<p class="has-line-data" data-line-start="344" data-line-end="346">當你的變數或是運算有符合<code>case</code> 後面的數值，就會進入該<code>case</code>執行程式碼<br>
-後面的<code>break</code>是用來跳出switch，不然會繼續找<code>case</code></p>
-<pre><code class="has-line-data" data-line-start="347" data-line-end="356">switch(a){
+<p>當你的變數或是運算有符合<code>case</code> 後面的數值，就會進入該<code>case</code>執行程式碼<br>後面的<code>break</code>是用來跳出switch，不然會繼續找<code>case</code>  </p>
+<pre><code>switch(a){
     case 1:
         //當如果 a=1 就會執行這裡的程式碼
         break;
@@ -515,8 +400,8 @@ switch(x-y){
         break;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="356" data-line-end="357">如果你有多個條件要進入同一段程式碼，可以這樣寫</p>
-<pre><code class="has-line-data" data-line-start="358" data-line-end="370">switch(a){
+<p>如果你有多個條件要進入同一段程式碼，可以這樣寫</p>
+<pre><code>switch(a){
     case 1: case 3:
         //當如果 a=1 或 a=3 就會執行這裡的程式碼
         break;
@@ -528,8 +413,8 @@ switch(x-y){
         break;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="370" data-line-end="371"><code>default</code>是當<code>case</code>都不成立時就會執行的段落，必須放在最後面</p>
-<pre><code class="has-line-data" data-line-start="372" data-line-end="381">switch(a){
+<p><code>default</code>是當<code>case</code>都不成立時就會執行的段落，必須放在最後面</p>
+<pre><code>switch(a){
     case 1:case 3:
         //當如果 a=1 或 a=3 就會執行這裡的程式碼
         break;
@@ -538,51 +423,49 @@ switch(x-y){
         break;
 }
 </code></pre>
-<h3 class="code-line" data-line-start=382 data-line-end=383 ><a id="_382"></a>關係運算符</h3>
-<table class="table table-striped table-bordered">
+<h3 id="關係運算符">關係運算符</h3>
+<table>
 <thead>
 <tr>
-<th style="text-align:center">運算符</th>
-<th style="text-align:center">描述</th>
-<th style="text-align:center">範例</th>
+<th align="center">運算符</th>
+<th align="center">描述</th>
+<th align="center">範例</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">==</td>
-<td style="text-align:center">兩數是否相等</td>
-<td style="text-align:center">a == b</td>
+<tbody><tr>
+<td align="center">==</td>
+<td align="center">兩數是否相等</td>
+<td align="center">a == b</td>
 </tr>
 <tr>
-<td style="text-align:center">!=</td>
-<td style="text-align:center">兩數是否不相等</td>
-<td style="text-align:center">a != b</td>
+<td align="center">!=</td>
+<td align="center">兩數是否不相等</td>
+<td align="center">a != b</td>
 </tr>
 <tr>
-<td style="text-align:center">&gt;</td>
-<td style="text-align:center">前數是否大於後數</td>
-<td style="text-align:center">a &gt; b</td>
+<td align="center">&gt;</td>
+<td align="center">前數是否大於後數</td>
+<td align="center">a &gt; b</td>
 </tr>
 <tr>
-<td style="text-align:center">&lt;</td>
-<td style="text-align:center">前數是否小於後數</td>
-<td style="text-align:center">a &lt; b</td>
+<td align="center">&lt;</td>
+<td align="center">前數是否小於後數</td>
+<td align="center">a &lt; b</td>
 </tr>
 <tr>
-<td style="text-align:center">&gt;=</td>
-<td style="text-align:center">前數是否大於等於後數</td>
-<td style="text-align:center">a &gt;= b</td>
+<td align="center">&gt;=</td>
+<td align="center">前數是否大於等於後數</td>
+<td align="center">a &gt;= b</td>
 </tr>
 <tr>
-<td style="text-align:center">&lt;=</td>
-<td style="text-align:center">前數是否小於等於後數</td>
-<td style="text-align:center">a &lt;= b</td>
+<td align="center">&lt;=</td>
+<td align="center">前數是否小於等於後數</td>
+<td align="center">a &lt;= b</td>
 </tr>
-</tbody>
-</table>
-<p class="has-line-data" data-line-start="392" data-line-end="393">回傳值為1(<code>true</code>)或是0(<code>false</code>)</p>
-<p class="has-line-data" data-line-start="394" data-line-end="395">舉例：</p>
-<pre><code class="has-line-data" data-line-start="396" data-line-end="410" class="language-cpp=">#include &lt;iostream&gt;
+</tbody></table>
+<p>回傳值為1(<code>true</code>)或是0(<code>false</code>)</p>
+<p>舉例：</p>
+<pre><code class="language-cpp=">#include &lt;iostream&gt;
 using namespace std;
 
 int main()
@@ -596,52 +479,48 @@ int main()
    }
 }
 </code></pre>
-<h3 class="code-line" data-line-start=411 data-line-end=412 ><a id="_411"></a>邏輯運算符</h3>
-<table class="table table-striped table-bordered">
+<h3 id="邏輯運算符">邏輯運算符</h3>
+<table>
 <thead>
 <tr>
-<th style="text-align:center">運算符</th>
-<th style="text-align:center">描述</th>
-<th style="text-align:center">舉例</th>
-<th style="text-align:center">範例</th>
-<th style="text-align:center">程式碼</th>
+<th align="center">運算符</th>
+<th align="center">描述</th>
+<th align="center">舉例</th>
+<th align="center">範例</th>
+<th align="center">程式碼</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">&amp;&amp;</td>
-<td style="text-align:center">且運算符</td>
-<td style="text-align:center">X條件 &amp;&amp; Y條件</td>
-<td style="text-align:center">a大於b 和 b大於c</td>
-<td style="text-align:center">a&gt;b &amp;&amp; b&gt;c</td>
+<tbody><tr>
+<td align="center">&amp;&amp;</td>
+<td align="center">且運算符</td>
+<td align="center">X條件 &amp;&amp; Y條件</td>
+<td align="center">a大於b 和 b大於c</td>
+<td align="center">a&gt;b &amp;&amp; b&gt;c</td>
 </tr>
 <tr>
-<td style="text-align:center">||</td>
-<td style="text-align:center">或運算符</td>
-<td style="text-align:center">X條件 || Y條件</td>
-<td style="text-align:center">a小於b 或 a小於c</td>
-<td style="text-align:center">a&lt;b || a&lt;c</td>
+<td align="center">||</td>
+<td align="center">或運算符</td>
+<td align="center">X條件 || Y條件</td>
+<td align="center">a小於b 或 a小於c</td>
+<td align="center">a&lt;b || a&lt;c</td>
 </tr>
 <tr>
-<td style="text-align:center">!</td>
-<td style="text-align:center">否(非)運算符</td>
-<td style="text-align:center">!X條件</td>
-<td style="text-align:center">非a大於b(等同 a小於等於b)</td>
-<td style="text-align:center">! a&gt;b</td>
+<td align="center">!</td>
+<td align="center">否(非)運算符</td>
+<td align="center">!X條件</td>
+<td align="center">非a大於b(等同 a小於等於b)</td>
+<td align="center">! a&gt;b</td>
 </tr>
-</tbody>
-</table>
-<h2 class="code-line" data-line-start=419 data-line-end=420 ><a id="_419"></a>循環</h2>
-<h3 class="code-line" data-line-start=420 data-line-end=421 ><a id="for_420"></a>for</h3>
-<pre><code class="has-line-data" data-line-start="422" data-line-end="426">for(起始式; 條件式; 更新式){
+</tbody></table>
+<h2 id="循環">循環</h2>
+<h3 id="for">for</h3>
+<pre><code>for(起始式; 條件式; 更新式){
     ...
 }
 </code></pre>
-<p class="has-line-data" data-line-start="427" data-line-end="430">起始式：進入迴圈第一次會執行的動作<br>
-條件式：每輪執行前，會做一次檢查，如果成立就繼續迴圈，直到條件式不成立<br>
-更新式：每當執行完一輪，就會執行一次更新式</p>
-<p class="has-line-data" data-line-start="431" data-line-end="432">實作：</p>
-<pre><code class="has-line-data" data-line-start="433" data-line-end="444" class="language-cpp=">#include&lt;iostream&gt;
+<p>起始式：進入迴圈第一次會執行的動作<br>條件式：每輪執行前，會做一次檢查，如果成立就繼續迴圈，直到條件式不成立<br>更新式：每當執行完一輪，就會執行一次更新式  </p>
+<p>實作：</p>
+<pre><code class="language-cpp=">#include&lt;iostream&gt;
 using namespace std;
 
 int i;
@@ -653,16 +532,16 @@ int main(){
 }
 </code></pre>
 <blockquote>
-<p class="has-line-data" data-line-start="444" data-line-end="445">i會從一開始(i=1)，如果小於等於10(i&lt;=10)，就會執行i+1(i++)，直到i不小於等於10</p>
+<p>i會從一開始(i=1)，如果小於等於10(i&lt;=10)，就會執行i+1(i++)，直到i不小於等於10</p>
 </blockquote>
-<h3 class="code-line" data-line-start=447 data-line-end=448 ><a id="while_447"></a>while</h3>
-<pre><code class="has-line-data" data-line-start="449" data-line-end="453">while(條件式){
+<h3 id="while">while</h3>
+<pre><code>while(條件式){
     ...
 }
 </code></pre>
-<p class="has-line-data" data-line-start="453" data-line-end="454">進入迴圈前會先檢查條件，成立後才會進入迴圈，迴圈會一直執行條件式不成立為止</p>
-<p class="has-line-data" data-line-start="455" data-line-end="456">實作：</p>
-<pre><code class="has-line-data" data-line-start="457" data-line-end="468" class="language-cpp=">#include&lt;iostream&gt;
+<p>進入迴圈前會先檢查條件，成立後才會進入迴圈，迴圈會一直執行條件式不成立為止</p>
+<p>實作：</p>
+<pre><code class="language-cpp=">#include&lt;iostream&gt;
 using namespace std;
 
 int i = 10;
@@ -674,16 +553,16 @@ int main(){
 }
 </code></pre>
 <blockquote>
-<p class="has-line-data" data-line-start="468" data-line-end="469">在while迴圈裡，只要i一直小於10，那就會一直在迴圈裡面循環，直到i不小於10。</p>
+<p>在while迴圈裡，只要i一直小於10，那就會一直在迴圈裡面循環，直到i不小於10。</p>
 </blockquote>
-<h3 class="code-line" data-line-start=470 data-line-end=471 ><a id="dowhile_470"></a>do…while</h3>
-<pre><code class="has-line-data" data-line-start="472" data-line-end="476">do{
+<h3 id="dowhile">do...while</h3>
+<pre><code>do{
     ...
 }while(條件式)
 </code></pre>
-<p class="has-line-data" data-line-start="476" data-line-end="477">迴圈會先執行一次，才會檢查條件，之後會一直執行條件式不成立為止</p>
-<p class="has-line-data" data-line-start="478" data-line-end="479">實作：</p>
-<pre><code class="has-line-data" data-line-start="480" data-line-end="491" class="language-cpp=">#include&lt;iostream&gt;
+<p>迴圈會先執行一次，才會檢查條件，之後會一直執行條件式不成立為止</p>
+<p>實作：</p>
+<pre><code class="language-cpp=">#include&lt;iostream&gt;
 using namespace std;
 
 int i = 10;
@@ -695,11 +574,11 @@ int main(){
 }
 </code></pre>
 <blockquote>
-<p class="has-line-data" data-line-start="491" data-line-end="492">在while迴圈裡，只要i一直小於10，那就會一直在迴圈裡面循環，直到i不小於10。</p>
+<p>在while迴圈裡，只要i一直小於10，那就會一直在迴圈裡面循環，直到i不小於10。</p>
 </blockquote>
-<h3 class="code-line" data-line-start=493 data-line-end=494 ><a id="break_493"></a>break</h3>
-<p class="has-line-data" data-line-start="494" data-line-end="495">在迴圈裡面執行到一半，要直接跳出迴圈時，可以使用<code>break</code>直接跳出，會跳離離他最近的迴圈</p>
-<pre><code class="has-line-data" data-line-start="496" data-line-end="511" class="language-cpp=">#include&lt;iostream&gt;
+<h3 id="break">break</h3>
+<p>在迴圈裡面執行到一半，要直接跳出迴圈時，可以使用<code>break</code>直接跳出，會跳離離他最近的迴圈</p>
+<pre><code class="language-cpp=">#include&lt;iostream&gt;
 using namespace std;
 
 int i = 1;
@@ -714,10 +593,10 @@ int main(){
     }
 }
 </code></pre>
-<h2 class="code-line" data-line-start=512 data-line-end=513 ><a id="_512"></a>函式</h2>
-<p class="has-line-data" data-line-start="513" data-line-end="514">一般來說，除了有主函式<code>main()</code>以外，也可以自訂自己的函式，當如果有同一區段的程式會需要多次的重複執行，自訂函式就可以讓你的主函式美觀一點。</p>
-<h3 class="code-line" data-line-start=514 data-line-end=515 ><a id="_514"></a>宣告</h3>
-<pre><code class="has-line-data" data-line-start="516" data-line-end="525">回傳型態 名稱(引數){
+<h2 id="函式">函式</h2>
+<p>一般來說，除了有主函式<code>main()</code>以外，也可以自訂自己的函式，當如果有同一區段的程式會需要多次的重複執行，自訂函式就可以讓你的主函式美觀一點。</p>
+<h3 id="宣告">宣告</h3>
+<pre><code>回傳型態 名稱(引數){
     副程式程式碼
 }
 
@@ -726,43 +605,20 @@ void test1(){
     副程式程式碼
 }
 </code></pre>
-<h3 class="code-line" data-line-start=526 data-line-end=527 ><a id="_526"></a>回傳型態</h3>
-<p class="has-line-data" data-line-start="527" data-line-end="528">一般用於回傳數值給呼叫的地方，如果沒有要回傳值可以用 void 。</p>
-<p class="has-line-data" data-line-start="529" data-line-end="530">常見型態：</p>
-<table class="table table-striped table-bordered">
-<thead>
-<tr>
-<th style="text-align:center">程式碼</th>
-<th style="text-align:center">名稱</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">void</td>
-<td style="text-align:center">不會回傳東西</td>
-</tr>
-<tr>
-<td style="text-align:center">int</td>
-<td style="text-align:center">回傳整數</td>
-</tr>
-<tr>
-<td style="text-align:center">char</td>
-<td style="text-align:center">回傳字元</td>
-</tr>
-<tr>
-<td style="text-align:center">double</td>
-<td style="text-align:center">回傳浮點數</td>
-</tr>
-</tbody>
-</table>
-<h3 class="code-line" data-line-start=538 data-line-end=539 ><a id="_538"></a>名稱</h3>
-<p class="has-line-data" data-line-start="539" data-line-end="541">副函式可以有多個，名稱可以自訂，但有些像是主程式的main名稱是不能用的，<br>
-如果遇到不行使用的名稱編譯器會跟你講，不用擔心</p>
-<h3 class="code-line" data-line-start=542 data-line-end=543 ><a id="_542"></a>參數&amp;引數</h3>
-<p class="has-line-data" data-line-start="543" data-line-end="546">引數可有可無，可以有多個引數，用於攜帶數值到副程式<br>
-在主程式的變數和副程式的變數名稱互不影響，即使取相同名稱也是不一樣的東西<br>
-呼叫函式時，提供給函式的資料叫做引數(argument)，接受引數的叫做參數(parameter)</p>
-<pre><code class="has-line-data" data-line-start="547" data-line-end="573" class="language-cpp=">#include&lt;stdio.h&gt;
+<h3 id="回傳型態">回傳型態</h3>
+<p>一般用於回傳數值給呼叫的地方，如果沒有要回傳值可以用 void 。</p>
+<p>常見型態：
+| 程式碼 |     名稱     |
+|:------:|:------------:|
+|  void  | 不會回傳東西 |
+|  int   |   回傳整數   |
+|  char  |   回傳字元   |
+| double |  回傳浮點數  |</p>
+<h3 id="名稱">名稱</h3>
+<p>副函式可以有多個，名稱可以自訂，但有些像是主程式的main名稱是不能用的，<br>如果遇到不行使用的名稱編譯器會跟你講，不用擔心</p>
+<h3 id="參數引數">參數&amp;引數</h3>
+<p>引數可有可無，可以有多個引數，用於攜帶數值到副程式<br>在主程式的變數和副程式的變數名稱互不影響，即使取相同名稱也是不一樣的東西<br>呼叫函式時，提供給函式的資料叫做引數(argument)，接受引數的叫做參數(parameter)</p>
+<pre><code class="language-cpp=">#include&lt;stdio.h&gt;
 #include&lt;stdlib.h&gt;
 
 //一個引數
@@ -782,19 +638,18 @@ void test3(){
 
 int main(){
     int k=10,v=30;
-    char c='a';
+    char c=&#39;a&#39;;
     test1(k);
     test2(k,a,v);
     test3();
 }
 </code></pre>
-<p class="has-line-data" data-line-start="573" data-line-end="575">&lt;font color=#FF0000&gt;注意，副函式宣告需要在main函式之前&lt;/font&gt;<br>
-程式執行只會先從main函式執行，當有呼叫到副函式才會跳到副函式。</p>
-<h3 class="code-line" data-line-start=576 data-line-end=577 ><a id="_576"></a>回傳值</h3>
-<p class="has-line-data" data-line-start="577" data-line-end="580">回傳數值要用<code>return</code>，但要回傳的值資料型態要跟宣告副函式時的資料回傳型態一樣，<br>
-只要執行到<code>return</code>就會直接跳回到呼叫副程式的地方<br>
+<p><font color=#FF0000>注意，副函式宣告需要在main函式之前</font><br>程式執行只會先從main函式執行，當有呼叫到副函式才會跳到副函式。</p>
+<h3 id="回傳值">回傳值</h3>
+<p>回傳數值要用<code>return</code>，但要回傳的值資料型態要跟宣告副函式時的資料回傳型態一樣，
+只要執行到<code>return</code>就會直接跳回到呼叫副程式的地方
 參考以下程式碼。</p>
-<pre><code class="has-line-data" data-line-start="581" data-line-end="595" class="language-cpp=">#include&lt;stdio.h&gt;
+<pre><code class="language-cpp=">#include&lt;stdio.h&gt;
 #include&lt;stdlib.h&gt;
 
 int add(int x,int y){ 
@@ -808,71 +663,26 @@ int main(){
     //執行後d會等於40
 }
 </code></pre>
-<h2 class="code-line" data-line-start=595 data-line-end=596 ><a id="_595"></a>數字</h2>
-<p class="has-line-data" data-line-start="596" data-line-end="597">要使用這些數學函式時，需要引用數學頭文件</p>
-<pre><code class="has-line-data" data-line-start="598" data-line-end="600">#include &lt;cmath&gt;
+<h2 id="數字">數字</h2>
+<p>要使用這些數學函式時，需要引用數學頭文件</p>
+<pre><code>#include &lt;cmath&gt;
 </code></pre>
-<p class="has-line-data" data-line-start="600" data-line-end="601">常用的數學函式：</p>
-<table class="table table-striped table-bordered">
-<thead>
-<tr>
-<th style="text-align:center">函數</th>
-<th style="text-align:center">回傳值型態</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">sin(double)</td>
-<td style="text-align:center">double</td>
-<td style="text-align:center">正弦</td>
-</tr>
-<tr>
-<td style="text-align:center">cos(double)</td>
-<td style="text-align:center">double</td>
-<td style="text-align:center">餘弦</td>
-</tr>
-<tr>
-<td style="text-align:center">tan(double)</td>
-<td style="text-align:center">double</td>
-<td style="text-align:center">正切</td>
-</tr>
-<tr>
-<td style="text-align:center">log(double)</td>
-<td style="text-align:center">double</td>
-<td style="text-align:center">自然對數</td>
-</tr>
-<tr>
-<td style="text-align:center">pow(double,double)</td>
-<td style="text-align:center">double</td>
-<td style="text-align:center">前數為x，後數為y，函數會回傳x的y次方</td>
-</tr>
-<tr>
-<td style="text-align:center">sqrt(double)</td>
-<td style="text-align:center">double</td>
-<td style="text-align:center">平方根</td>
-</tr>
-<tr>
-<td style="text-align:center">round(double)</td>
-<td style="text-align:center">int</td>
-<td style="text-align:center">將小數四捨五入成整數</td>
-</tr>
-<tr>
-<td style="text-align:center">abs(int)</td>
-<td style="text-align:center">int</td>
-<td style="text-align:center">絕對值</td>
-</tr>
-<tr>
-<td style="text-align:center">fabs(double)</td>
-<td style="text-align:center">double</td>
-<td style="text-align:center">絕對值</td>
-</tr>
-</tbody>
-</table>
-<h3 class="code-line" data-line-start=612 data-line-end=613 ><a id="_612"></a>隨機數</h3>
-<p class="has-line-data" data-line-start="613" data-line-end="615">要使用這些隨機函數時，需要引用時間頭文件，這樣隨機函數才會隨著時間有變化，不然<code>rand()</code><br>
+<p>常用的數學函式：
+|        函數        | 回傳值型態 |                 描述                 |
+|:------------------:|:----------:|:------------------------------------:|
+|    sin(double)     |   double   |                 正弦                 |
+|    cos(double)     |   double   |                 餘弦                 |
+|    tan(double)     |   double   |                 正切                 |
+|    log(double)     |   double   |               自然對數               |
+| pow(double,double) |   double   | 前數為x，後數為y，函數會回傳x的y次方 |
+|    sqrt(double)    |   double   |                平方根                |
+|   round(double)    |    int     |         將小數四捨五入成整數         |
+|      abs(int)      |    int     |                絕對值                |
+|    fabs(double)    |   double   |                絕對值                |</p>
+<h3 id="隨機數">隨機數</h3>
+<p>要使用這些隨機函數時，需要引用時間頭文件，這樣隨機函數才會隨著時間有變化，不然<code>rand()</code>
 結果會固定。</p>
-<pre><code class="has-line-data" data-line-start="616" data-line-end="637" class="language-cpp=">#include &lt;iostream&gt;
+<pre><code class="language-cpp=">#include &lt;iostream&gt;
 #include &lt;ctime&gt;
 
 using namespace std;
@@ -893,223 +703,187 @@ int main ()
    return 0;
 }
 </code></pre>
-<h2 class="code-line" data-line-start=637 data-line-end=638 ><a id="_637"></a>陣列</h2>
-<p class="has-line-data" data-line-start="638" data-line-end="639">C++支援陣列數據結構，可以存放固定大小相同類型的集合。</p>
-<h3 class="code-line" data-line-start=639 data-line-end=640 ><a id="_639"></a>宣告</h3>
-<p class="has-line-data" data-line-start="640" data-line-end="641">宣告一個陣列，需要指定元素類型、數量</p>
-<pre><code class="has-line-data" data-line-start="642" data-line-end="644">變數型態 陣列名稱 [ 陣列大小 ]
+<h2 id="陣列">陣列</h2>
+<p>C++支援陣列數據結構，可以存放固定大小相同類型的集合。</p>
+<h3 id="宣告-1">宣告</h3>
+<p>宣告一個陣列，需要指定元素類型、數量</p>
+<pre><code>變數型態 陣列名稱 [ 陣列大小 ]
 </code></pre>
-<p class="has-line-data" data-line-start="644" data-line-end="645">Ex.宣告一個類型為int，元素數量為5，名稱為a的陣列</p>
-<pre><code class="has-line-data" data-line-start="646" data-line-end="648">int a[5];
+<p>Ex.宣告一個類型為int，元素數量為5，名稱為a的陣列</p>
+<pre><code>int a[5];
 </code></pre>
-<p class="has-line-data" data-line-start="648" data-line-end="649">陣列有 n 個空間，那編號就是是 0 ~ n - 1</p>
-<table class="table table-striped table-bordered">
+<p>陣列有 n 個空間，那編號就是是 0 ~ n - 1
+| 編號 | a[0] | a[1] | a[2] | a[3] | a[4] |
+|:----:|:----:|:----:|:----:|:----:|:----:|
+| 數值 |  0   |  0   |  0   |  0   |  0   |</p>
+<h3 id="初始化-1">初始化</h3>
+<p>在C++中，可以逐個初始化陣列內的元素<br><code>{}</code>大括號內的元素數量，不能超過<code>[]</code>中括號內的數字  </p>
+<pre><code>int a[5] = { 2 , 1 , 4 , 5 , 3 };
+</code></pre>
+<table>
 <thead>
 <tr>
-<th style="text-align:center">編號</th>
-<th style="text-align:center">a[0]</th>
-<th style="text-align:center">a[1]</th>
-<th style="text-align:center">a[2]</th>
-<th style="text-align:center">a[3]</th>
-<th style="text-align:center">a[4]</th>
+<th align="center">編號</th>
+<th align="center">a[0]</th>
+<th align="center">a[1]</th>
+<th align="center">a[2]</th>
+<th align="center">a[3]</th>
+<th align="center">a[4]</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">數值</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
+<tbody><tr>
+<td align="center">數值</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">4</td>
+<td align="center">5</td>
+<td align="center">3</td>
 </tr>
-</tbody>
-</table>
-<h3 class="code-line" data-line-start=652 data-line-end=653 ><a id="_652"></a>初始化</h3>
-<p class="has-line-data" data-line-start="653" data-line-end="655">在C++中，可以逐個初始化陣列內的元素<br>
-<code>{}</code>大括號內的元素數量，不能超過<code>[]</code>中括號內的數字</p>
-<pre><code class="has-line-data" data-line-start="656" data-line-end="658">int a[5] = { 2 , 1 , 4 , 5 , 3 };
+</tbody></table>
+<p>如果確定陣列內的元素數量和值，可以直接宣告，此時<code>[]</code>中可以不用打數字  </p>
+<pre><code>int a[] = { 2 , 1 , 6 , 8 , 4 , 3 };
 </code></pre>
-<table class="table table-striped table-bordered">
+<table>
 <thead>
 <tr>
-<th style="text-align:center">編號</th>
-<th style="text-align:center">a[0]</th>
-<th style="text-align:center">a[1]</th>
-<th style="text-align:center">a[2]</th>
-<th style="text-align:center">a[3]</th>
-<th style="text-align:center">a[4]</th>
+<th align="center">編號</th>
+<th align="center">a[0]</th>
+<th align="center">a[1]</th>
+<th align="center">a[2]</th>
+<th align="center">a[3]</th>
+<th align="center">a[4]</th>
+<th align="center">a[5]</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">數值</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">3</td>
+<tbody><tr>
+<td align="center">數值</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">6</td>
+<td align="center">8</td>
+<td align="center">4</td>
+<td align="center">3</td>
 </tr>
-</tbody>
-</table>
-<p class="has-line-data" data-line-start="663" data-line-end="664">如果確定陣列內的元素數量和值，可以直接宣告，此時<code>[]</code>中可以不用打數字</p>
-<pre><code class="has-line-data" data-line-start="665" data-line-end="667">int a[] = { 2 , 1 , 6 , 8 , 4 , 3 };
+</tbody></table>
+<h3 id="數值修改">數值修改</h3>
+<p>有一個陣列如下：</p>
+<pre><code>int a[] = {1,2,3};
 </code></pre>
-<table class="table table-striped table-bordered">
+<table>
 <thead>
 <tr>
-<th style="text-align:center">編號</th>
-<th style="text-align:center">a[0]</th>
-<th style="text-align:center">a[1]</th>
-<th style="text-align:center">a[2]</th>
-<th style="text-align:center">a[3]</th>
-<th style="text-align:center">a[4]</th>
-<th style="text-align:center">a[5]</th>
+<th align="center">編號</th>
+<th align="center">a[0]</th>
+<th align="center">a[1]</th>
+<th align="center">a[2]</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">數值</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">6</td>
-<td style="text-align:center">8</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">3</td>
+<tbody><tr>
+<td align="center">數值</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
 </tr>
-</tbody>
-</table>
-<h3 class="code-line" data-line-start=671 data-line-end=672 ><a id="_671"></a>數值修改</h3>
-<p class="has-line-data" data-line-start="672" data-line-end="673">有一個陣列如下：</p>
-<pre><code class="has-line-data" data-line-start="674" data-line-end="676">int a[] = {1,2,3};
+</tbody></table>
+<p>修改數字</p>
+<pre><code>a[1]=7;
 </code></pre>
-<table class="table table-striped table-bordered">
+<table>
 <thead>
 <tr>
-<th style="text-align:center">編號</th>
-<th style="text-align:center">a[0]</th>
-<th style="text-align:center">a[1]</th>
-<th style="text-align:center">a[2]</th>
+<th align="center">編號</th>
+<th align="center">a[0]</th>
+<th align="center">a[1]</th>
+<th align="center">a[2]</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">數值</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">3</td>
+<tbody><tr>
+<td align="center">數值</td>
+<td align="center">1</td>
+<td align="center"><font color=#FF0000>7</font></td>
+<td align="center">3</td>
 </tr>
-</tbody>
-</table>
-<p class="has-line-data" data-line-start="680" data-line-end="681">修改數字</p>
-<pre><code class="has-line-data" data-line-start="682" data-line-end="684">a[1]=7;
-</code></pre>
-<table class="table table-striped table-bordered">
-<thead>
-<tr>
-<th style="text-align:center">編號</th>
-<th style="text-align:center">a[0]</th>
-<th style="text-align:center">a[1]</th>
-<th style="text-align:center">a[2]</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">數值</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">&lt;font color=#FF0000&gt;7&lt;/font&gt;</td>
-<td style="text-align:center">3</td>
-</tr>
-</tbody>
-</table>
-<h2 class="code-line" data-line-start=688 data-line-end=689 ><a id="_688"></a>字串</h2>
-<p class="has-line-data" data-line-start="689" data-line-end="690">C++有兩種字串的表示法</p>
+</tbody></table>
+<h2 id="字串">字串</h2>
+<p>C++有兩種字串的表示法</p>
 <ul>
-<li class="has-line-data" data-line-start="690" data-line-end="691">字元陣列</li>
-<li class="has-line-data" data-line-start="691" data-line-end="692">string 類型</li>
-</ul>
-<h3 class="code-line" data-line-start=692 data-line-end=693 ><a id="_692"></a>字元陣列</h3>
-<p class="has-line-data" data-line-start="693" data-line-end="694">字元字串是一些字元和結尾為<code>\0(又稱為null)</code>結尾組成的陣列</p>
-<h3 class="code-line" data-line-start=694 data-line-end=695 ><a id="__694"></a>* 定義</h3>
-<p class="has-line-data" data-line-start="695" data-line-end="696">宣告一個類型為char(字元)，元素數量為6，名稱為word的陣列</p>
-<pre><code class="has-line-data" data-line-start="697" data-line-end="699">char word[6] = { 'H', 'e', 'l', 'l', 'o', '\0' };
+<li>字元陣列</li>
+<li>string 類型<h3 id="字元陣列">字元陣列</h3>
+字元字串是一些字元和結尾為<code>\0(又稱為null)</code>結尾組成的陣列<h3 id="-定義">* 定義</h3>
+宣告一個類型為char(字元)，元素數量為6，名稱為word的陣列<pre><code>char word[6] = { &#39;H&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, &#39;\0&#39; };
 </code></pre>
-<p class="has-line-data" data-line-start="699" data-line-end="700">同樣的也可以寫成這樣：</p>
-<pre><code class="has-line-data" data-line-start="701" data-line-end="703">char word[] = &quot;Hello&quot;;
+同樣的也可以寫成這樣：<pre><code>char word[] = &quot;Hello&quot;;
 </code></pre>
-<p class="has-line-data" data-line-start="703" data-line-end="704">C++編譯器在初始化字元陣列時，會自動把<code>'\0'</code>放在尾端</p>
-<table class="table table-striped table-bordered">
+C++編譯器在初始化字元陣列時，會自動把<code>&#39;\0&#39;</code>放在尾端<table>
 <thead>
 <tr>
-<th style="text-align:center">編號</th>
-<th style="text-align:center">word[0]</th>
-<th style="text-align:center">word[1]</th>
-<th style="text-align:center">word[2]</th>
-<th style="text-align:center">word[3]</th>
-<th style="text-align:center">word[4]</th>
-<th style="text-align:center">word[5]</th>
+<th align="center">編號</th>
+<th align="center">word[0]</th>
+<th align="center">word[1]</th>
+<th align="center">word[2]</th>
+<th align="center">word[3]</th>
+<th align="center">word[4]</th>
+<th align="center">word[5]</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">數值</td>
-<td style="text-align:center">‘H’</td>
-<td style="text-align:center">‘e’</td>
-<td style="text-align:center">‘l’</td>
-<td style="text-align:center">‘l’</td>
-<td style="text-align:center">‘o’</td>
-<td style="text-align:center">‘\0’</td>
+<tbody><tr>
+<td align="center">數值</td>
+<td align="center">&#39;H&#39;</td>
+<td align="center">&#39;e&#39;</td>
+<td align="center">&#39;l&#39;</td>
+<td align="center">&#39;l&#39;</td>
+<td align="center">&#39;o&#39;</td>
+<td align="center">&#39;\0&#39;</td>
 </tr>
-</tbody>
-</table>
-<p class="has-line-data" data-line-start="708" data-line-end="709">範例：</p>
-<pre><code class="has-line-data" data-line-start="710" data-line-end="722" class="language-cpp=">#include &lt;iostream&gt;
+</tbody></table>
+</li>
+</ul>
+<p>範例：</p>
+<pre><code class="language-cpp=">#include &lt;iostream&gt;
 using namespace std;
 
 int main ()
 {
-   char word1[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+   char word1[6] = {&#39;H&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, &#39;\0&#39;};
    char word2[] = &quot;Hello&quot;;
    cout &lt;&lt; word1 &lt;&lt; endl;
    cout &lt;&lt; word2 &lt;&lt; endl;
    return 0;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="722" data-line-end="723">這兩種執行結果會一樣</p>
-<p class="has-line-data" data-line-start="724" data-line-end="725">有一些函式可以用來控制字串</p>
-<table class="table table-striped table-bordered">
+<p>這兩種執行結果會一樣</p>
+<p>有一些函式可以用來控制字串</p>
+<table>
 <thead>
 <tr>
-<th style="text-align:center">函式</th>
-<th style="text-align:center">說明</th>
+<th align="center">函式</th>
+<th align="center">說明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">strcpy(s1, s2);</td>
-<td style="text-align:center">複製字串2(s2)到字串1(s1)</td>
+<tbody><tr>
+<td align="center">strcpy(s1, s2);</td>
+<td align="center">複製字串2(s2)到字串1(s1)</td>
 </tr>
 <tr>
-<td style="text-align:center">strcat(s1, s2);</td>
-<td style="text-align:center">把字串2(s2)連接到字串1(s1)的尾端</td>
+<td align="center">strcat(s1, s2);</td>
+<td align="center">把字串2(s2)連接到字串1(s1)的尾端</td>
 </tr>
 <tr>
-<td style="text-align:center">strlen(s1);</td>
-<td style="text-align:center">回傳字串1(s1)的長度</td>
+<td align="center">strlen(s1);</td>
+<td align="center">回傳字串1(s1)的長度</td>
 </tr>
 <tr>
-<td style="text-align:center">strchr(s1, c);</td>
-<td style="text-align:center">回傳字元c在字串1(s1)第一次出現的位置</td>
+<td align="center">strchr(s1, c);</td>
+<td align="center">回傳字元c在字串1(s1)第一次出現的位置</td>
 </tr>
 <tr>
-<td style="text-align:center">strstr(s1, s2);</td>
-<td style="text-align:center">回傳字串2(s2)在字串1(s1)第一次出現的位置</td>
+<td align="center">strstr(s1, s2);</td>
+<td align="center">回傳字串2(s2)在字串1(s1)第一次出現的位置</td>
 </tr>
-</tbody>
-</table>
-<h3 class="code-line" data-line-start=735 data-line-end=736 ><a id="string__735"></a>string 類型</h3>
-<p class="has-line-data" data-line-start="736" data-line-end="737">string除了有上述字元陣列的功能，引入<code>&lt;string&gt;</code>的頭文件，還有增加其他更多個功能可以使用。</p>
-<pre><code class="has-line-data" data-line-start="738" data-line-end="759" class="language-cpp=">#include &lt;iostream&gt;
+</tbody></table>
+<h3 id="string-類型">string 類型</h3>
+<p>string除了有上述字元陣列的功能，引入<code>&lt;string&gt;</code>的頭文件，還有增加其他更多個功能可以使用。</p>
+<pre><code class="language-cpp=">#include &lt;iostream&gt;
 #include &lt;string&gt;
 using namespace std;
 int main ()
@@ -1130,10 +904,10 @@ int main ()
    return 0;
 }
 </code></pre>
-<h2 class="code-line" data-line-start=760 data-line-end=761 ><a id="_760"></a>指標</h2>
-<h3 class="code-line" data-line-start=762 data-line-end=763 ><a id="_762"></a>指標是什麼?</h3>
-<p class="has-line-data" data-line-start="763" data-line-end="764">平常程式執行時</p>
-<pre><code class="has-line-data" data-line-start="765" data-line-end="773">int main(){
+<h2 id="指標">指標</h2>
+<h3 id="指標是什麼">指標是什麼?</h3>
+<p>平常程式執行時</p>
+<pre><code>int main(){
     int a = 18;
     int b = 7;
     int c = 50;
@@ -1141,106 +915,98 @@ int main ()
     int e = 12;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="774" data-line-end="775">以 <code>int a = 18;</code> 為例，程式執行時，處理器會去跟記憶體要一塊空間，把18這個資料放進去。</p>
-<table class="table table-striped table-bordered">
+<p>以 <code>int a = 18;</code> 為例，程式執行時，處理器會去跟記憶體要一塊空間，把18這個資料放進去。  </p>
+<table>
 <thead>
 <tr>
-<th style="text-align:center">變數型態</th>
-<th style="text-align:center">位元組</th>
+<th align="center">變數型態</th>
+<th align="center">位元組</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">bool</td>
-<td style="text-align:center">1</td>
+<tbody><tr>
+<td align="center">bool</td>
+<td align="center">1</td>
 </tr>
 <tr>
-<td style="text-align:center">char</td>
-<td style="text-align:center">1</td>
+<td align="center">char</td>
+<td align="center">1</td>
 </tr>
 <tr>
-<td style="text-align:center">int</td>
-<td style="text-align:center">4</td>
+<td align="center">int</td>
+<td align="center">4</td>
 </tr>
 <tr>
-<td style="text-align:center">long</td>
-<td style="text-align:center">8</td>
+<td align="center">long</td>
+<td align="center">8</td>
 </tr>
 <tr>
-<td style="text-align:center">float</td>
-<td style="text-align:center">4</td>
+<td align="center">float</td>
+<td align="center">4</td>
 </tr>
 <tr>
-<td style="text-align:center">double</td>
-<td style="text-align:center">8</td>
+<td align="center">double</td>
+<td align="center">8</td>
 </tr>
-</tbody>
-</table>
-<p class="has-line-data" data-line-start="786" data-line-end="787">一塊空間的大小，會隨著資料型態產生變化，把記憶體比喻成一棟大樓，一個位元組為一層樓，像是一個<code>int</code>變數就需要4層樓才能存放。</p>
-<p class="has-line-data" data-line-start="788" data-line-end="789">以上述程式碼舉例，存放在記憶體內就長這樣</p>
-<table class="table table-striped table-bordered">
+</tbody></table>
+<p>一塊空間的大小，會隨著資料型態產生變化，把記憶體比喻成一棟大樓，一個位元組為一層樓，像是一個<code>int</code>變數就需要4層樓才能存放。  </p>
+<p>以上述程式碼舉例，存放在記憶體內就長這樣  </p>
+<table>
 <thead>
 <tr>
-<th style="text-align:center">記憶體位址(起始位址)</th>
-<th style="text-align:center">數值</th>
+<th align="center">記憶體位址(起始位址)</th>
+<th align="center">數值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">0x0012FF6c</td>
-<td style="text-align:center">…</td>
+<tbody><tr>
+<td align="center">0x0012FF6c</td>
+<td align="center">...</td>
 </tr>
 <tr>
-<td style="text-align:center">0x0012FF70</td>
-<td style="text-align:center">18</td>
+<td align="center">0x0012FF70</td>
+<td align="center">18</td>
 </tr>
 <tr>
-<td style="text-align:center">0x0012FF74</td>
-<td style="text-align:center">7</td>
+<td align="center">0x0012FF74</td>
+<td align="center">7</td>
 </tr>
 <tr>
-<td style="text-align:center">0x0012FF78</td>
-<td style="text-align:center">50</td>
+<td align="center">0x0012FF78</td>
+<td align="center">50</td>
 </tr>
 <tr>
-<td style="text-align:center">0x0012FF7c</td>
-<td style="text-align:center">100</td>
+<td align="center">0x0012FF7c</td>
+<td align="center">100</td>
 </tr>
 <tr>
-<td style="text-align:center">0x0012FF80</td>
-<td style="text-align:center">12</td>
+<td align="center">0x0012FF80</td>
+<td align="center">12</td>
 </tr>
 <tr>
-<td style="text-align:center">0x0012FF84</td>
-<td style="text-align:center">…</td>
+<td align="center">0x0012FF84</td>
+<td align="center">...</td>
 </tr>
-</tbody>
-</table>
-<p class="has-line-data" data-line-start="800" data-line-end="804">註1：記憶體位址是由處理器分配的，每次執行程式時記憶體位址都可能不一樣。<br>
-註2：記憶體位址為16進位。<br>
-&lt;br&gt;&lt;br&gt;<br>
+</tbody></table>
+<p>註1：記憶體位址是由處理器分配的，每次執行程式時記憶體位址都可能不一樣。<br>註2：記憶體位址為16進位。<br><br><br>
 也就是說，當我們宣告一個變數時，會有三個元素：</p>
-<table class="table table-striped table-bordered">
+<table>
 <thead>
 <tr>
-<th style="text-align:center">變數位址(起始位址)</th>
-<th style="text-align:center">變數數值</th>
-<th style="text-align:center">變數名稱</th>
+<th align="center">變數位址(起始位址)</th>
+<th align="center">變數數值</th>
+<th align="center">變數名稱</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">0x0012FF70</td>
-<td style="text-align:center">18</td>
-<td style="text-align:center">a</td>
+<tbody><tr>
+<td align="center">0x0012FF70</td>
+<td align="center">18</td>
+<td align="center">a</td>
 </tr>
-</tbody>
-</table>
-<p class="has-line-data" data-line-start="809" data-line-end="810">除禮器會向記憶體要一塊空間來儲存變數，這個儲存空間有一個起始位址。加上這個變數的名稱a與變數值18。</p>
-<p class="has-line-data" data-line-start="811" data-line-end="812">通常會把變數的位址，稱為「指向該變數的指標」。</p>
-<h3 class="code-line" data-line-start=813 data-line-end=814 ><a id="_813"></a>取址</h3>
-<p class="has-line-data" data-line-start="814" data-line-end="815">在<code>C++</code>中取址的方式就是放<code>&amp;</code>在變數前面</p>
-<pre><code class="has-line-data" data-line-start="817" data-line-end="826" class="language-cpp=">#include&lt;iostream&gt;
+</tbody></table>
+<p>除禮器會向記憶體要一塊空間來儲存變數，這個儲存空間有一個起始位址。加上這個變數的名稱a與變數值18。</p>
+<p>通常會把變數的位址，稱為「指向該變數的指標」。</p>
+<h3 id="取址">取址</h3>
+<p>在<code>C++</code>中取址的方式就是放<code>&amp;</code>在變數前面  </p>
+<pre><code class="language-cpp=">#include&lt;iostream&gt;
 using namespace std;
 
 int main(){
@@ -1249,10 +1015,10 @@ int main(){
     cout &lt;&lt; &quot;變數 a 的記憶體位址：&quot; &lt;&lt; &amp;a &lt;&lt; endl;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="826" data-line-end="827">這個程式中，宣告了一個 int 整數 a，並印出「&amp;a」的值，知道 a 所在的記憶體位址</p>
-<h3 class="code-line" data-line-start=828 data-line-end=829 ><a id="_828"></a>取值</h3>
-<p class="has-line-data" data-line-start="829" data-line-end="830">利用<code>*pointer</code>的方式去讀取該位址的值</p>
-<pre><code class="has-line-data" data-line-start="831" data-line-end="841" class="language-cpp=">#include&lt;iostream&gt;
+<p>這個程式中，宣告了一個 int 整數 a，並印出「&amp;a」的值，知道 a 所在的記憶體位址</p>
+<h3 id="取值">取值</h3>
+<p>利用<code>*pointer</code>的方式去讀取該位址的值</p>
+<pre><code class="language-cpp=">#include&lt;iostream&gt;
 using namespace std;
 
 int main(){
@@ -1262,25 +1028,24 @@ int main(){
     cout &lt;&lt; &quot;變數 a 的位址的值：&quot; &lt;&lt; *&amp;a &lt;&lt; endl;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="841" data-line-end="842">也可以說，<code>*&amp;a</code>和<code>a</code>是等價的。</p>
-<h3 class="code-line" data-line-start=843 data-line-end=844 ><a id="_843"></a>指標變數</h3>
-<p class="has-line-data" data-line-start="845" data-line-end="847">當今天有了指標，就會需要存放指標的變數<br>
+<p>也可以說，<code>*&amp;a</code>和<code>a</code>是等價的。</p>
+<h3 id="指標變數">指標變數</h3>
+<p>當今天有了指標，就會需要存放指標的變數
 平常程式執行時</p>
-<pre><code class="has-line-data" data-line-start="848" data-line-end="850">int* pointer
+<pre><code>int* pointer
 </code></pre>
-<p class="has-line-data" data-line-start="850" data-line-end="851">宣告時，用<code>*</code>來表示 pointer 這個變數是個指標</p>
-<pre><code class="has-line-data" data-line-start="852" data-line-end="857">int b; 
+<p>宣告時，用<code>*</code>來表示 pointer 這個變數是個指標</p>
+<pre><code>int b; 
 b = 2; 
 int* pointer; 
 pointer = &amp;b; 
 </code></pre>
-<p class="has-line-data" data-line-start="857" data-line-end="859"><code>&amp;</code>是用來把變數的地址取出來，<br>
-&lt;font color=#FF0000&gt;注意，不能寫成<code>pointer = b;</code>， pointer 是專門存放地址的變數。&lt;/font&gt;</p>
-<pre><code class="has-line-data" data-line-start="861" data-line-end="863">pointer = &amp;b; 
+<p><code>&amp;</code>是用來把變數的地址取出來，<br><font color=#FF0000>注意，不能寫成<code>pointer = b;</code>， pointer 是專門存放地址的變數。</font>  </p>
+<pre><code>pointer = &amp;b; 
 </code></pre>
-<p class="has-line-data" data-line-start="864" data-line-end="865">又稱：指標變數 pointer 指向了變數 b</p>
-<p class="has-line-data" data-line-start="866" data-line-end="867">當要取指標變數的值時，也等同於取變數b的值</p>
-<pre><code class="has-line-data" data-line-start="868" data-line-end="880" class="language-cpp=">#include&lt;iostream&gt;
+<p>又稱：指標變數 pointer 指向了變數 b</p>
+<p>當要取指標變數的值時，也等同於取變數b的值</p>
+<pre><code class="language-cpp=">#include&lt;iostream&gt;
 using namespace std;
 
 int main(){
@@ -1292,8 +1057,7 @@ int main(){
     cout &lt;&lt; &quot;取 pointer 位址的值：&quot; &lt;&lt; *pointer &lt;&lt; endl;
 }
 </code></pre>
-<h2 class="code-line" data-line-start=881 data-line-end=882 ><a id="_881"></a>數據結構</h2>
-<h6 class="code-line" data-line-start=884 data-line-end=885 ><a id="tags_CC_884"></a>tags: <code>C/C++</code></h6>
-<p class="has-line-data" data-line-start="885" data-line-end="887">有任何疑問或錯誤，請聯絡我。<br>
-<a href="mailto:aura01221@gmail.com">aura01221@gmail.com</a></p>
-<h2 class="code-line" data-line-start=889 data-line-end=890 ><a id="_889"></a>存儲</h2>
+<h2 id="數據結構">數據結構</h2>
+<h6 id="tags-cc">tags: <code>C/C++</code></h6>
+<p>有任何疑問或錯誤，請聯絡我。<br><a href="mailto:&#97;&#117;&#x72;&#97;&#x30;&#x31;&#x32;&#x32;&#49;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#97;&#117;&#x72;&#97;&#x30;&#x31;&#x32;&#x32;&#49;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#109;</a></p>
+<h2 id="存儲">存儲</h2>
