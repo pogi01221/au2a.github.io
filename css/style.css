@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&family=Zen+Dots&display=swap');
+
 
 body {
     background-image: url(image/background.jpg);
@@ -9,17 +10,27 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
 }
 
+body::-webkit-scrollbar {
+    display: none;
+  }
+
 .Mainarea {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
     position: relative;
-    width: 800px;
+    width: 1000px;
     top: 100px;
-    border: 3px solid #424752;
+    border: 3px solid white;
     border-radius: 10px;
     background-color: #424752;
+    color:white;
     margin: auto;
-    width: 50%;
     padding: 10px;
 }
 
@@ -29,9 +40,79 @@ body {
     color: transparent;
     background-image: linear-gradient(90deg, #fba33f, #f5c99b);
     -webkit-background-clip: text;
-
-
 }
+
+.avatarBackground{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 350px;
+    height: 350px;
+}
+
+.avatar{
+    background-image: url(image/background.jpg);
+    border-radius: 50%;
+    position: relative;
+    top: 25px;
+    left: 25px;
+    width: 300px;
+    height: 300px;
+}
+
+.left{
+    font-family: 'Roboto', monospace;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+}
+
+.right{
+    font-family: 'Roboto', monospace;
+    display: flex;
+    border-radius: 10px;
+    border: 3px solid white;
+    flex-direction: column;
+    position: relative;
+    width: 600px;
+    top: 10px;
+    left: 40px;
+    font-size: 15px;
+}
+
+.mainInfo{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.name{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.nickname{
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.companyLocation{
+    font-size: 15px;
+}
+
+.leftDiv{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+/* .flex-container {
+    display: flex | inline-flex;
+  } */
 
 /* .box1 {
     height: 80px;
@@ -39,9 +120,9 @@ body {
     text-align: center;
 }
 
-@media(min-width: 540px) {
-    .box1 {
-        background: lightyellow;
+@media(max-width: 390px) {
+    .Mainarea {
+        width: 300px;
     }
 }
 
