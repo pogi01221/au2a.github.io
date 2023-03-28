@@ -1,5 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&family=Zen+Dots&display=swap');
 
+@keyframes login {
+    0% {
+        top: 0px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 100px;
+        opacity: 1;
+    }
+}
+
+.area {
+    display: flex;
+    top: 100px;
+    flex-direction: column;
+    position: relative;
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: #424752;
+    color: white;
+    margin: auto;
+    animation-name: login;
+    animation-duration: 1s;
+    animation-iteration-count: 1
+}
 
 body {
     background-image: url(image/background.jpg);
@@ -12,29 +38,34 @@ body {
     border: 0;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    
 }
 
 body::-webkit-scrollbar {
     display: none;
-  }
-
-.Mainarea {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    position: relative;
-    width: 1000px;
-    top: 100px;
-    border: 3px solid white;
-    border-radius: 10px;
-    background-color: #424752;
-    color:white;
-    margin: auto;
-    padding: 10px;
 }
 
-.title{
+ul {
+    list-style-image: url("image/coding_mini.png");
+}
+
+li {
+    position: relative;
+    top: 12px;
+    vertical-align: super;
+}
+
+
+.top {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.down {
+    display: flex;
+    position: relative;
+    top: 100px;
+    height: 80px;
     font-family: 'Zen Dots', cursive;
     font-size: 72px;
     color: transparent;
@@ -42,25 +73,7 @@ body::-webkit-scrollbar {
     -webkit-background-clip: text;
 }
 
-.avatarBackground{
-    position: relative;
-    top: 10px;
-    left: 10px;
-    width: 350px;
-    height: 350px;
-}
-
-.avatar{
-    background-image: url(image/background.jpg);
-    border-radius: 50%;
-    position: relative;
-    top: 25px;
-    left: 25px;
-    width: 300px;
-    height: 300px;
-}
-
-.left{
+.left {
     font-family: 'Roboto', monospace;
     display: flex;
     flex-direction: column;
@@ -71,69 +84,193 @@ body::-webkit-scrollbar {
     font-size: 20px;
 }
 
-.right{
+.right {
     font-family: 'Roboto', monospace;
     display: flex;
     border-radius: 10px;
     border: 3px solid white;
     flex-direction: column;
     position: relative;
-    width: 600px;
-    top: 10px;
-    left: 40px;
+    top: 40px;
     font-size: 15px;
 }
 
-.mainInfo{
-    position: relative;
-    top: 10px;
-    left: 10px;
+.title {
+    font-family: 'Zen Dots', cursive;
+    font-size: 72px;
+    color: transparent;
+    background-image: linear-gradient(90deg, #fba33f, #f5c99b);
+    -webkit-background-clip: text;
 }
 
-.name{
+.avatarBackground {
+    position: relative;
+}
+
+.avatar {
+    background-image: url(image/background.jpg);
+    border-radius: 50%;
+    position: relative;
+}
+
+.mainInfo {
+    position: relative;
+    top: 15px;
+    left: 20px;
+}
+
+.name {
     font-size: 30px;
     font-weight: 500;
 }
 
-.nickname{
+.nickname {
     font-size: 30px;
     font-weight: 100;
 }
 
-.companyLocation{
+.companyLocation {
     font-size: 15px;
 }
 
-.leftDiv{
+.rightDiv {
     position: relative;
     top: 10px;
     left: 10px;
+    font-size: 20px;
 }
 
-/* .flex-container {
-    display: flex | inline-flex;
-  } */
-
-/* .box1 {
-    height: 80px;
-    background: lightgreen;
+.button {
+    background-color: #575b65;
+    border: none;
+    color: white;
+    padding-top: 15px ;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    height: 80px;
+    width: 120px;
 }
 
-@media(max-width: 390px) {
-    .Mainarea {
+@media(min-width: 0px) {
+    .area {
         width: 300px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .avatarBackground {
+        top: 15px;
+        left: 15px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .avatar {
+        top: 25px;
+        left: 25px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .top {
+        flex-direction: column;
+    }
+
+    .mainInfo {
+        width: 240px;
+    }
+
+    .right {
+        left: 20px;
+        width: 250px;
+        height: 870px;
+    }
+
+    .rightDiv {
+        width: 240px;
     }
 }
 
 @media(min-width: 768px) {
-    .box1 {
-        background: orange;
+    .area {
+        width: 720px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .avatarBackground {
+        top: 15px;
+        left: 15px;
+        width: 300px;
+        height: 300px;
+    }
+
+    .avatar {
+        top: 25px;
+        left: 25px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .top {
+        flex-direction: row;
+    }
+
+    .mainInfo {
+        width: 300px;
+    }
+
+    .right {
+        left: 0px;
+        width: 330px;
+        height: 600px;
+    }
+
+    .rightDiv {
+        width: auto;
     }
 }
 
-@media(min-width: 920px) {
-    .box1 {
-        background: lightpink;
+@media(min-width: 1440px) {
+    .area {
+        width: 1100px;
+        flex-direction: column;
+        align-items: stretch;
     }
-} */
+
+    .avatarBackground {
+        top: 15px;
+        left: 15px;
+        width: 350px;
+        height: 350px;
+    }
+
+    .avatar {
+        top: 25px;
+        left: 25px;
+        width: 300px;
+        height: 300px;
+    }
+
+    .top {
+        flex-direction: row;
+    }
+
+    .right {
+        left: 100px;
+        width: 610px;
+    }
+
+    .mainInfo {
+        width: 350px;
+    }
+
+    .rightDiv {
+        width: auto;
+    }
+}
