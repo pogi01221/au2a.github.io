@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&family=Zen+Dots&display=swap');
 
-@keyframes login {
+@keyframes up2down {
     0% {
         top: 0px;
         opacity: 0;
@@ -8,6 +8,23 @@
 
     100% {
         top: 100px;
+        opacity: 1;
+    }
+}
+
+@keyframes left2right {
+    0% {
+        left: 0px;
+        opacity: 0;
+    }
+
+    50% {
+        left: 0px;
+        opacity: 0;
+    }
+
+    100% {
+        left: var(--slide-up-y);
         opacity: 1;
     }
 }
@@ -22,7 +39,7 @@
     background-color: #424752;
     color: white;
     margin: auto;
-    animation-name: login;
+    animation-name: up2down;
     animation-duration: 1s;
     animation-iteration-count: 1
 }
@@ -64,13 +81,14 @@ li {
 .down {
     display: flex;
     position: relative;
-    top: 100px;
-    height: 80px;
+    top: 65px;
+    left: var(--slide-up-y);
     font-family: 'Zen Dots', cursive;
-    font-size: 72px;
     color: transparent;
-    background-image: linear-gradient(90deg, #fba33f, #f5c99b);
+    background-image: linear-gradient(90deg, #ffffff, #ffffff);
     -webkit-background-clip: text;
+    animation-name: left2right;
+    animation-duration: 2s;
 }
 
 .left {
@@ -95,14 +113,6 @@ li {
     font-size: 15px;
 }
 
-.title {
-    font-family: 'Zen Dots', cursive;
-    font-size: 72px;
-    color: transparent;
-    background-image: linear-gradient(90deg, #fba33f, #f5c99b);
-    -webkit-background-clip: text;
-}
-
 .avatarBackground {
     position: relative;
 }
@@ -116,7 +126,7 @@ li {
 .mainInfo {
     position: relative;
     top: 15px;
-    left: 20px;
+    left: 25px;
 }
 
 .name {
@@ -157,8 +167,12 @@ li {
 }
 
 @media(min-width: 0px) {
+    :root {
+        --slide-up-y: 110px;
+    }
     .area {
         width: 300px;
+        height: 1500px;
         flex-direction: column;
         align-items: stretch;
     }
@@ -194,11 +208,18 @@ li {
     .rightDiv {
         width: 240px;
     }
+    .down{
+        font-size: 36px;
+    }
 }
 
 @media(min-width: 768px) {
+    :root {
+        --slide-up-y: 340px;
+    }
     .area {
         width: 720px;
+        height: 680px;
         flex-direction: column;
         align-items: stretch;
     }
@@ -234,18 +255,25 @@ li {
     .rightDiv {
         width: auto;
     }
+    .down{
+        font-size: 72px;
+    }
 }
 
 @media(min-width: 1440px) {
+    :root {
+        --slide-up-y: 720px;
+    }
     .area {
         width: 1100px;
+        height: 680px;
         flex-direction: column;
         align-items: stretch;
     }
 
     .avatarBackground {
-        top: 15px;
-        left: 15px;
+        top: 20px;
+        left: 20px;
         width: 350px;
         height: 350px;
     }
@@ -272,5 +300,8 @@ li {
 
     .rightDiv {
         width: auto;
+    }
+    .down{
+        font-size: 72px;
     }
 }
