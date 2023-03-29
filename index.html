@@ -19,7 +19,7 @@
                 </div>
                 <div class="mainInfo">
                     <a class="name">Aura</a><br>
-                    <a class="nickname">au2a</a><br>
+                    <a class="nickname">AU2A</a><br>
                     <hr style="width:100%;text-align:left;margin-left:0">
                     <a class="bio">Coding, Robotics, Education</a><br>
                     <br>
@@ -27,8 +27,6 @@
                     <br>
                     <div>
                         <a class="company">Institute of Network Engineering, NYCU</a><br>
-                        <a class="companyLocation">Engineering Bldg 3, 1001 University Road, Hsinchu, Taiwan 300,
-                            ROC</a><br>
                     </div>
                 </div>
             </div>
@@ -39,22 +37,36 @@
                 </div><br><br>
                 <div class="rightDiv">
                     💻 skills<br>
-                    &lt;/&gt; C/C++, C#, Swift, Python<br>
-                    &lt;/&gt; HTML5, express.js<br>
-                    &lt;/&gt; Arduino, Nvidia Jetson Nano<br>
-                    &lt;/&gt; RaspberryPI, BananaPI<br>
-                    &lt;/&gt; Lego EV3, VEXv5<br>
+                    &lt;/&gt; <a class="skill">C/C++</a> <a class="skill">C#</a> <a class="skill">Swift</a> <a
+                        class="skill">Python</a><br>
+                    &lt;/&gt; <a class="skill">HTML5</a> <a class="skill">express.js</a><br>
+                    &lt;/&gt; <a class="skill">Arduino</a> <a class="skill">Nvidia Jetson Nano</a><br>
+                    &lt;/&gt; <a class="skill">RaspberryPI</a> <a class="skill">BananaPI</a><br>
+                    &lt;/&gt; <a class="skill">Lego EV3</a> <a class="skill">VEX V5</a><br>
                 </div><br><br>
-                <div class="rightDiv">
-                    🔗 contact me<br>
-                    <a class="button" href="mailto:aura@corelab.dev"><img width="30px" height="30px"
-                        src="css/image/mail.png"><div>Mail</div></a>
-                    <a class="button" href="https://github.com/AU2A"><img width="30px" height="30px"
-                            src="css/image/github.png"><div>Github</div></a>
-                    <a class="button" onclick="myFunction()"><img width="30px" height="30px"
-                            src="css/image/discord.png"><div id="dc">Aura.#1337</div></a>
-                            <a class="button" href="https://leetcode.com/AU2A/"><img width="30px" height="30px"
-                                    src="css/image/leetCode.png"><div id="dc">Leetcode</div></a>
+                <div class="link">
+                    <div style="width: 270px;">
+                        🔗 contact me<br>
+                        <a class="button" href="mailto:aura@corelab.dev"><img width="30px" height="30px"
+                                src="css/image/mail.png">
+                            <div>Mail</div>
+                        </a>
+                        <a class="button" onclick="myFunction()"><img width="30px" height="30px"
+                                src="css/image/discord.png">
+                            <div id="dc">AU2A#0063</div>
+                        </a>
+                    </div>
+                    <div style="width: 270px;">
+                        🔗 more me<br>
+                        <a class="button" href="https://github.com/AU2A"><img width="30px" height="30px"
+                                src="css/image/github.png">
+                            <div>Github</div>
+                        </a>
+                        <a class="button" href="https://leetcode.com/AU2A/"><img width="30px" height="30px"
+                                src="css/image/leetCode.png">
+                            <div id="dc">Leetcode</div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,7 +78,7 @@
 <script>
     function myFunction() {
         // Get the text field
-        var copyText = "Aura.#1337"
+        var copyText = document.getElementById("dc").textContent
         // Copy the text inside the text field
         navigator.clipboard.writeText(copyText);
         document.getElementById("dc").textContent = "Copied!"
