@@ -46,6 +46,21 @@
     }
 }
 
+.area {
+    display: flex;
+    top: 100px;
+    flex-direction: column;
+    position: relative;
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: #424752;
+    color: white;
+    margin: auto;
+    animation-name: up2down;
+    animation-duration: 1s;
+    animation-iteration-count: 1
+}
+
 body {
     background-image: url(image/background.jpg);
     background-repeat: no-repeat;
@@ -63,38 +78,34 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-.area {
-    animation-name: up2down;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    align-items: stretch;
-    border: 3px solid white;
-    border-radius: 10px;
-    background-color: #424752;
-    color: white;
-    display: flex;
-    margin: auto;
-    position: relative;
-    top: 100px;
+ul {
+    list-style-image: url("image/coding_mini.png");
 }
 
+li {
+    position: relative;
+    top: 12px;
+    vertical-align: super;
+}
+
+
 .top {
+    width: 100%;
     display: flex;
     position: relative;
-    width: 100%;
 }
 
 .down {
-    animation-name: left2right;
-    -webkit-background-clip: text;
-    animation-duration: 2s;
-    background-image: linear-gradient(90deg, #ffffff, #ffffff);
-    color: transparent;
     display: flex;
-    font-family: 'Zen Dots', cursive;
-    left: var(--slide-up-y);
     position: relative;
-    top: 5px;
+    top: 65px;
+    left: var(--slide-up-y);
+    font-family: 'Zen Dots', cursive;
+    color: transparent;
+    background-image: linear-gradient(90deg, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    animation-name: left2right;
+    animation-duration: 2s;
 }
 
 .left {
@@ -113,12 +124,14 @@ body::-webkit-scrollbar {
     border-radius: 10px;
     border: 3px solid white;
     flex-direction: column;
-    margin: 25px;
     position: relative;
+    top: 40px;
+    font-size: 15px;
 }
 
 .avatarBackground {
-    background-color: #424752;
+    /* position: relative; */
+    /* margin: auto; */
 }
 
 .avatar {
@@ -129,7 +142,8 @@ body::-webkit-scrollbar {
 
 .mainInfo {
     position: relative;
-    padding: 20px;
+    top: 15px;
+    left: 25px;
 }
 
 .name {
@@ -142,16 +156,22 @@ body::-webkit-scrollbar {
     font-weight: 100;
 }
 
+.companyLocation {
+    font-size: 15px;
+}
+
 .rightDiv {
     position: relative;
-    padding: 10px;
+    top: 10px;
+    left: 10px;
     font-size: 20px;
 }
 
 .link {
     position: relative;
-    padding: 10px;
-    width: 600px;
+    top: 10px;
+    left: 10px;
+    width: 700px;
     font-size: 20px;
     display: flex;
 }
@@ -181,6 +201,7 @@ body::-webkit-scrollbar {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    font-size: 20px;
     margin: 4px 2px;
     border-radius: 12px;
     /* animation-name: down2up;
@@ -194,50 +215,55 @@ body::-webkit-scrollbar {
     }
 
     .area {
-        flex-direction: column;
-        height: 1570px;
         width: 300px;
+        height: 1500px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .avatarBackground {
+        top: 15px;
+        left: 15px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .avatar {
+        top: 25px;
+        left: 25px;
+        width: 200px;
+        height: 200px;
     }
 
     .top {
         flex-direction: column;
     }
 
+    .mainInfo {
+        width: 240px;
+    }
+
+    .right {
+        left: 20px;
+        width: 250px;
+        height: 910px;
+    }
+
+    .rightDiv {
+        width: 240px;
+    }
+
     .down {
         font-size: 36px;
-        width: 190px;
     }
 
     .link {
         flex-direction: column;
     }
 
-    .left {
-        width: 260px;
-    }
-
-    .right {
-        width: 240px;
-    }
-
-    .avatarBackground {
-        width: 250px;
-        height: 250px;
-    }
-
-    .avatar {
-        margin: 25px;
-        width: 200px;
-        height: 200px;
-    }
-
     .button {
         font-size: 15px;
         width: 105px;
-    }
-
-    .skill {
-        font-size: 18px;
     }
 }
 
@@ -247,50 +273,53 @@ body::-webkit-scrollbar {
     }
 
     .area {
-        flex-direction: column;
-        height: 830px;
         width: 720px;
+        height: 830px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .avatarBackground {
+        padding: 15px;
+        width: 300px;
+        height: 300px;
+    }
+
+    .avatar {
+        padding: 0px;
+        width: 250px;
+        height: 250px;
     }
 
     .top {
         flex-direction: row;
     }
 
+    .mainInfo {
+        width: 300px;
+    }
+
+    .right {
+        left: 0px;
+        width: 330px;
+        height: 750px;
+    }
+
+    .rightDiv {
+        width: auto;
+    }
+
     .down {
         font-size: 72px;
-        width: 380px;
     }
 
     .link {
         flex-direction: column;
     }
 
-    .right {
-        width: 320px;
-    }
-
-    .left {
-        width: 300px;
-    }
-
-    .avatarBackground {
-        width: 300px;
-        height: 300px;
-    }
-
-    .avatar {
-        margin: 25px;
-        width: 250px;
-        height: 250px;
-    }
-
     .button {
         font-size: 20px;
         width: 120px;
-    }
-
-    .skill {
-        font-size: 18px;
     }
 }
 
@@ -300,49 +329,54 @@ body::-webkit-scrollbar {
     }
 
     .area {
-        flex-direction: column;
-        height: 680px;
         width: 1100px;
+        height: 680px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .avatarBackground {
+        top: 20px;
+        left: 20px;
+        width: 350px;
+        height: 350px;
+    }
+
+    .avatar {
+        top: 25px;
+        left: 25px;
+        width: 300px;
+        height: 300px;
     }
 
     .top {
         flex-direction: row;
     }
 
+    .right {
+        left: 100px;
+        width: 610px;
+        height: 600px;
+    }
+
+    .mainInfo {
+        width: 350px;
+    }
+
+    .rightDiv {
+        width: auto;
+    }
+
     .down {
         font-size: 72px;
-        width: 380px;
     }
 
     .link {
         flex-direction: row;
     }
 
-    .right {
-        width: 700px;
-    }
-
-    .left {
-        width: 350px;
-    }
-
-    .avatarBackground {
-        width: 350px;
-        height: 350px;
-    }
-
-    .avatar {
-        margin: 25px;
-        width: 300px;
-        height: 300px;
-    }
-
     .button {
         font-size: 20px;
         width: 120px;
-    }
-
-    .skill {
-        font-size: 20px;
     }
 }
